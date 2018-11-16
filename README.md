@@ -2,10 +2,8 @@
 
 ## Introduction
 
-Bucklescript + ReasonReact binding for [next-seo](https://github.com/garmeeh/next-seo) components. I write bindings when I needed them in my projects. 
-If you find a component is missing, it's because I don't need it (yet).
+Bucklescript + ReasonReact binding for [next-seo](https://github.com/garmeeh/next-seo) component. 
 
-Cautionary note that I am very new to bindings so confirmation and testing is necessary for anything you want to use as I only tested what I use.
 ** See [bs-ant-design](https://github.com/thangngoc89/bs-ant-design) repo for original credit on this pattern. **
 
 ## Installation
@@ -18,21 +16,31 @@ npm install --save bs-next-seo
 
 ## Usage
 ```
-[@bs.deriving abstract]
-type nextSeoConfig = {
-  canonical: string,
-  title: string,
-};
-
-let config = nextSeoConfig(~canonical="https://www.example.com", ~title="Index");
-
-<NextSeo config />
+<NextSeo title="something" />
 ```
 
-## Components
+## Attributes
+```js
+    title
+    description
+    canonical
+    ogType
+    ogLocale
+    ogUrl
+    ogTitle
+    ogDescription
+    ogDefaultImageWidth
+    ogDefaultImageHeight
+    ogImages
+    ogSiteName
+    twitterHandle
+    twitterSite
+    twitterCardType
+```
 
-I did the components I needed.  While I usually made an attempt to do all the params technically, I only tested the
-ones I needed.  Assume you will need to test everything you want to use well.
+## Notes
+I couldn't quite figure out how to bind a config prop in a type safe way.  If you want to support a config prop, 
+look at the commented out source and feel free to push a fix.  
 
 ## Contributions
 

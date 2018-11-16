@@ -1,6 +1,6 @@
 {
   "name": "bs-next-seo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bucklescript bindings for next-seo",
   "repository": {
     "type": "git",
